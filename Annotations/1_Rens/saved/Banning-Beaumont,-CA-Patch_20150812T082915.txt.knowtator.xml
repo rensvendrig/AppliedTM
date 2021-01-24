@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotations textSource="Banning-Beaumont,-CA-Patch_20150812T082915.txt">
+    <annotation>
+        <mention id="EHOST_Instance_3208" />
+        <annotator id="eHOST_2010">Rens</annotator>
+        <span start="928" end="930" />
+        <spannedText>in</spannedText>
+        <creationDate>Thu Jan 07 16:29:23 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_3208">
+        <mentionClass id="NegCue">in</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_3209" />
+        <annotator id="eHOST_2010">Rens</annotator>
+        <span start="1138" end="1140" />
+        <spannedText>no</spannedText>
+        <creationDate>Thu Jan 07 16:29:31 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_3209">
+        <mentionClass id="NegCue">no</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_3210" />
+        <annotator id="eHOST_2010">Rens</annotator>
+        <span start="2121" end="2123" />
+        <spannedText>un</spannedText>
+        <creationDate>Thu Jan 07 16:30:21 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_3210">
+        <mentionClass id="NegCue">un</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_3211" />
+        <annotator id="eHOST_2010">Rens</annotator>
+        <span start="2832" end="2834" />
+        <spannedText>un</spannedText>
+        <creationDate>Thu Jan 07 16:30:46 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_3211">
+        <mentionClass id="NegCue">un</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_3212" />
+        <annotator id="eHOST_2010">Rens</annotator>
+        <span start="3268" end="3270" />
+        <spannedText>un</spannedText>
+        <creationDate>Thu Jan 07 16:31:05 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_3212">
+        <mentionClass id="NegCue">un</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_3213" />
+        <annotator id="eHOST_2010">Oracle[Rens]</annotator>
+        <span start="3386" end="3388" />
+        <spannedText>un</spannedText>
+        <creationDate>Thu Jan 07 16:31:11 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_3213">
+        <mentionClass id="NegCue">un</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_3214" />
+        <annotator id="eHOST_2010">Rens</annotator>
+        <span start="3749" end="3752" />
+        <spannedText>not</spannedText>
+        <creationDate>Thu Jan 07 16:31:35 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_3214">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_3215" />
+        <annotator id="eHOST_2010">Oracle[Rens]</annotator>
+        <span start="2368" end="2371" />
+        <spannedText>not</spannedText>
+        <creationDate>Thu Jan 07 16:31:36 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_3215">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <eHOST_Adjudication_Status version="1.0">
+        <Adjudication_Selected_Annotators version="1.0" />
+        <Adjudication_Selected_Classes version="1.0" />
+        <Adjudication_Others>
+            <CHECK_OVERLAPPED_SPANS>false</CHECK_OVERLAPPED_SPANS>
+            <CHECK_ATTRIBUTES>false</CHECK_ATTRIBUTES>
+            <CHECK_RELATIONSHIP>false</CHECK_RELATIONSHIP>
+            <CHECK_CLASS>false</CHECK_CLASS>
+            <CHECK_COMMENT>false</CHECK_COMMENT>
+        </Adjudication_Others>
+    </eHOST_Adjudication_Status>
+</annotations>
+

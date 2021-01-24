@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotations textSource="blogs-cdc-gov_20170616T233823.txt">
+    <annotation>
+        <mention id="EHOST_Instance_23040" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="110" end="113" />
+        <spannedText>n’t</spannedText>
+        <creationDate>Sat Jan 09 02:55:22 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23040">
+        <mentionClass id="NegCue">n’t</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23041" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="2721" end="2726" />
+        <spannedText>under</spannedText>
+        <creationDate>Sat Jan 09 02:59:24 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23041">
+        <mentionClass id="NegCue">under</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23042" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="2839" end="2844" />
+        <spannedText>under</spannedText>
+        <creationDate>Sat Jan 09 02:59:11 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23042">
+        <mentionClass id="NegCue">under</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23043" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="2959" end="2962" />
+        <spannedText>dis</spannedText>
+        <creationDate>Sat Jan 09 02:59:57 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23043">
+        <mentionClass id="NegCue">dis</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23044" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="4486" end="4489" />
+        <spannedText>not</spannedText>
+        <creationDate>Sat Jan 09 03:01:07 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23044">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23045" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="4845" end="4848" />
+        <spannedText>not</spannedText>
+        <creationDate>Sat Jan 09 03:01:25 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23045">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23046" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="5038" end="5041" />
+        <spannedText>not</spannedText>
+        <creationDate>Sat Jan 09 03:01:32 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23046">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23047" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="5197" end="5200" />
+        <spannedText>not</spannedText>
+        <creationDate>Sat Jan 09 03:01:44 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23047">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23048" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="5479" end="5482" />
+        <spannedText>n’t</spannedText>
+        <creationDate>Sat Jan 09 03:02:06 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23048">
+        <mentionClass id="NegCue">n’t</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23049" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="5611" end="5614" />
+        <spannedText>n’t</spannedText>
+        <creationDate>Sat Jan 09 03:02:18 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23049">
+        <mentionClass id="NegCue">n’t</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23050" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="5973" end="5975" />
+        <spannedText>un</spannedText>
+        <creationDate>Sat Jan 09 03:02:52 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23050">
+        <mentionClass id="NegCue">un</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23051" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="6396" end="6399" />
+        <spannedText>not</spannedText>
+        <creationDate>Sat Jan 09 03:03:18 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23051">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23052" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="6595" end="6598" />
+        <spannedText>NOT</spannedText>
+        <creationDate>Sat Jan 09 03:03:29 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23052">
+        <mentionClass id="NegCue">NOT</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23053" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="6581" end="6583" />
+        <spannedText>im</spannedText>
+        <creationDate>Sat Jan 09 03:03:44 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23053">
+        <mentionClass id="NegCue">im</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23054" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="6900" end="6903" />
+        <spannedText>not</spannedText>
+        <creationDate>Sat Jan 09 03:03:57 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23054">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23055" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="6925" end="6928" />
+        <spannedText>not</spannedText>
+        <creationDate>Sat Jan 09 03:04:00 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23055">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23056" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="6982" end="6985" />
+        <spannedText>not</spannedText>
+        <creationDate>Sat Jan 09 03:04:02 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23056">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23057" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="7761" end="7763" />
+        <spannedText>un</spannedText>
+        <creationDate>Sat Jan 09 03:04:47 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23057">
+        <mentionClass id="NegCue">un</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23058" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="8622" end="8625" />
+        <spannedText>not</spannedText>
+        <creationDate>Sat Jan 09 03:05:25 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23058">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23059" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="9769" end="9771" />
+        <spannedText>un</spannedText>
+        <creationDate>Sat Jan 09 03:06:27 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23059">
+        <mentionClass id="NegCue">un</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23060" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="10224" end="10229" />
+        <spannedText>under</spannedText>
+        <creationDate>Sat Jan 09 03:06:57 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23060">
+        <mentionClass id="NegCue">under</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23061" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="11516" end="11518" />
+        <spannedText>in</spannedText>
+        <creationDate>Sat Jan 09 03:07:59 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23061">
+        <mentionClass id="NegCue">in</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23062" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="13521" end="13524" />
+        <spannedText>not</spannedText>
+        <creationDate>Sat Jan 09 03:09:53 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23062">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23063" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="13576" end="13579" />
+        <spannedText>not</spannedText>
+        <creationDate>Sat Jan 09 03:09:56 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23063">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23064" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="14105" end="14108" />
+        <spannedText>not</spannedText>
+        <creationDate>Sat Jan 09 03:10:19 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23064">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23065" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="15000" end="15002" />
+        <spannedText>un</spannedText>
+        <creationDate>Sat Jan 09 03:11:01 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23065">
+        <mentionClass id="NegCue">un</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23066" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="15279" end="15281" />
+        <spannedText>Un</spannedText>
+        <creationDate>Sat Jan 09 03:11:26 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23066">
+        <mentionClass id="NegCue">Un</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23067" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="15467" end="15470" />
+        <spannedText>n’t</spannedText>
+        <creationDate>Sat Jan 09 03:11:43 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23067">
+        <mentionClass id="NegCue">n’t</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23068" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="16143" end="16145" />
+        <spannedText>un</spannedText>
+        <creationDate>Sat Jan 09 03:12:18 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23068">
+        <mentionClass id="NegCue">un</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23069" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="16299" end="16302" />
+        <spannedText>n’t</spannedText>
+        <creationDate>Sat Jan 09 03:12:29 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23069">
+        <mentionClass id="NegCue">n’t</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23070" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="16431" end="16433" />
+        <spannedText>no</spannedText>
+        <creationDate>Sat Jan 09 03:12:43 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23070">
+        <mentionClass id="NegCue">no</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_23071" />
+        <annotator id="eHOST_2010">S_Martha</annotator>
+        <span start="16669" end="16672" />
+        <spannedText>n’t</spannedText>
+        <creationDate>Sat Jan 09 03:12:56 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_23071">
+        <mentionClass id="NegCue">n’t</mentionClass>
+    </classMention>
+    <eHOST_Adjudication_Status version="1.0">
+        <Adjudication_Selected_Annotators version="1.0" />
+        <Adjudication_Selected_Classes version="1.0" />
+        <Adjudication_Others>
+            <CHECK_OVERLAPPED_SPANS>false</CHECK_OVERLAPPED_SPANS>
+            <CHECK_ATTRIBUTES>false</CHECK_ATTRIBUTES>
+            <CHECK_RELATIONSHIP>false</CHECK_RELATIONSHIP>
+            <CHECK_CLASS>false</CHECK_CLASS>
+            <CHECK_COMMENT>false</CHECK_COMMENT>
+        </Adjudication_Others>
+    </eHOST_Adjudication_Status>
+</annotations>
+

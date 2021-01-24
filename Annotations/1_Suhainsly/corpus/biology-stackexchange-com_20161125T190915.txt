@@ -1,0 +1,20 @@
+1
+ 
+Cowpox (Vaccinia) is not "weakened smallpox" (Variola). They are entirely separate, but related, viruses. –  MattDMo May 17 '15 at 14:19
+  
+ 
+@MattDMo True. It slipped my mind. Corrected the post. –  Rover Eye May 17 '15 at 14:22
+1
+ 
+Interestingly, the word vaccination is derived from vacca,  the Latin word for cow. –  mgkrebbs May 17 '15 at 23:41
+  
+ 
+I'd maybe clarify. A vaccination isn't necessarily the whole pathogen, like the tetanus vaccine is the injection of a tetanus toxoid prepared from the toxin, so you build antibodies toward that (inactive) structure. Likewise, Gardasil is simply inactive viral proteins from HPV. Flu vaccine, however, is indeed attenuated flu strains. I would argue the fundamental difference is inoculation used live organisms where this isnt necessarily true of a vaccine in the modern sense. –  CMosychuk May 18 '15 at 23:27
+  
+ 
+@RoverEye That helped. However, I am still not sure if it would be correct to say that vaccination is an advanced form of inoculation. –  Prasad Shrivatsa May 25 '15 at 17:10
+up vote 1 down vote
+In a general sense and as per the current scientific parlance, inoculation is used to mean introduction of a microbe to a system. This can refer to immunization procedures as well as for addition of a microbe to a culture medium in microbiological procedures.
+Vaccination specifically refers to an immunization procedure which may involve attenuated pathogens, inactivated toxins (tetanus toxoid) or even specific proteins which are expressed in a lab microbe using recombinant DNA technology (as in case of hepatitis-B vaccine).
+Etymology of both the terms, however, pertains to smallpox immunization. "Inoculation" is derived from Latin inoculatus, past participle of inoculare "graft in, implant a bud or eye of one plant into another [1] . In this procedure, the immunization was done by infecting an individual with a smallpox pustule from a patient (in a way grafting the pox).
+"Vaccination" comes from the latin word vacca which means cow. This refers to the vaccine that Edward Jenner derived from cowpox.

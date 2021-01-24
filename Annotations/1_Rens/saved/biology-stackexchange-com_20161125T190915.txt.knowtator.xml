@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotations textSource="biology-stackexchange-com_20161125T190915.txt">
+    <annotation>
+        <mention id="EHOST_Instance_3228" />
+        <annotator id="eHOST_2010">Rens</annotator>
+        <span start="26" end="29" />
+        <spannedText>not</spannedText>
+        <creationDate>Thu Jan 07 16:55:31 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_3228">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_3229" />
+        <annotator id="eHOST_2010">Rens</annotator>
+        <span start="411" end="414" />
+        <spannedText>n't</spannedText>
+        <creationDate>Thu Jan 07 16:55:47 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_3229">
+        <mentionClass id="NegCue">n't</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_3230" />
+        <annotator id="eHOST_2010">Rens</annotator>
+        <span start="623" end="629" />
+        <spannedText>active</spannedText>
+        <creationDate>Thu Jan 07 16:56:03 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_3230">
+        <mentionClass id="NegCue">active</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_3231" />
+        <annotator id="eHOST_2010">Rens</annotator>
+        <span start="800" end="802" />
+        <spannedText>nt</spannedText>
+        <creationDate>Thu Jan 07 16:56:13 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_3231">
+        <mentionClass id="NegCue">nt</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_3232" />
+        <annotator id="eHOST_2010">Rens</annotator>
+        <span start="941" end="944" />
+        <spannedText>not</spannedText>
+        <creationDate>Thu Jan 07 16:56:20 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_3232">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_3233" />
+        <annotator id="eHOST_2010">Rens</annotator>
+        <span start="1457" end="1459" />
+        <spannedText>in</spannedText>
+        <creationDate>Thu Jan 07 16:56:54 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_3233">
+        <mentionClass id="NegCue">in</mentionClass>
+    </classMention>
+    <eHOST_Adjudication_Status version="1.0">
+        <Adjudication_Selected_Annotators version="1.0" />
+        <Adjudication_Selected_Classes version="1.0" />
+        <Adjudication_Others>
+            <CHECK_OVERLAPPED_SPANS>false</CHECK_OVERLAPPED_SPANS>
+            <CHECK_ATTRIBUTES>false</CHECK_ATTRIBUTES>
+            <CHECK_RELATIONSHIP>false</CHECK_RELATIONSHIP>
+            <CHECK_CLASS>false</CHECK_CLASS>
+            <CHECK_COMMENT>false</CHECK_COMMENT>
+        </Adjudication_Others>
+    </eHOST_Adjudication_Status>
+</annotations>
+
