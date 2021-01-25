@@ -13,21 +13,6 @@ from gensim.models import KeyedVectors
 
 from collections import Counter
 
-# load dataset
-path = "../data/preprocessed_SEM-2012-SharedTask-CD-SCO-training-simple.v2.txt"
-dev = pd.read_csv(path, sep="\t")
-
-# pos
-dev_list = dev["token"].tolist()
-pos_tags_dev = pos_tag([i for i in dev_list if i])
-words, tags = zip(*pos_tags_dev)
-pos_list = tags
-dev["pos"] = pos_list
-
-# true/false basic negations
-NegExpList = ['nor', 'neither', 'without', 'nobody', 'none', 'nothing', 'never', 'not', 'no', 'nowhere', 'non']
-dev['in_NegExpList'] = dev['token'].apply(lambda x: x.lower() in NegExpList)
-
 
 # stem
 def stem(dev):
@@ -101,24 +86,22 @@ def get_vector_representation(dev):
 
     known_words = []
     unknown_words = []
+    featureVectors = []
 
     for token in tokens:
-        if token in frequent_keywords:
-            if token in modelword_index:
-                featureVec = np.add(featureVec,
-                                    WORD_EMBEDDING_MODEL[token] / np.linalg.norm(WORD_EMBEDDING_MODEL[token]))
-                known_words.append(token)
-                nwords = nwords + 1
-            else:
-                if token in modelword_index:
-                    featureVec = np.add(featureVec,
-                                        WORD_EMBEDDING_MODEL[token] / np.linalg.norm(WORD_EMBEDDING_MODEL[token]))
-                    known_words.append(token)
-                    nwords = nwords + 1
-                else:
-                    unknown_words.append(token)
+        if token in modelword_index:
+            featureVec = np.add(featureVec,
+                                WORD_EMBEDDING_MODEL[token] / np.linalg.norm(WORD_EMBEDDING_MODEL[token]))
 
-    featureVec = np.divide(featureVec, nwords)
+            known_words.append(token)
+        else:
+            unknown_words.append(token)
+            featureVec = np.average(featureVectors)
+
+        featureVectors.append(featureVec)
+        nwords = nwords + 1
+
+    #featureVec = np.divide(featureVec, nwords)
 
     # 3. average feature vector
     counter = 0
@@ -129,9 +112,9 @@ def get_vector_representation(dev):
         if counter % 1000 == 0:
             print("Review %d of %d" % (counter, len(token)))
 
-        devFeatureVecs[counter] = featureVec
+        devFeatureVecs[counter] = featureVectors[counter]
         counter = counter + 1
-
+    print(unknown_words)
     devFeatureVecs = np.nan_to_num(devFeatureVecs)
     return devFeatureVecs
 
@@ -140,6 +123,21 @@ def add_vectors(dev):
     vectors = get_vector_representation(dev)
     dev["vector"] = pd.Series()
     dev["vector"] = vectors
+
+# load dataset
+path = "../data/preprocessed_SEM-2012-SharedTask-CD-SCO-training-simple.v2.txt"
+dev = pd.read_csv(path, sep="\t")
+
+# pos
+dev_list = dev["token"].tolist()
+pos_tags_dev = pos_tag([i for i in dev_list if i])
+words, tags = zip(*pos_tags_dev)
+pos_list = tags
+dev["pos"] = pos_list
+
+# true/false basic negations
+NegExpList = ['nor', 'neither', 'without', 'nobody', 'none', 'nothing', 'never', 'not', 'no', 'nowhere', 'non']
+dev['in_NegExpList'] = dev['token'].apply(lambda x: x.lower() in NegExpList)
 
 
 # define variables
