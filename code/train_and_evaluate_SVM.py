@@ -7,7 +7,21 @@ from sklearn import svm
 from sklearn.metrics import classification_report
 import time
 
-
+def error_analysis(test_docs, test_labels, pred_labels):
+    numWrong = 0
+    i = 0
+    wrongTokens = []
+    for test_label, pred_label in zip(test_labels, pred_labels):
+        if test_label != pred_label:
+            print("true value: ",test_label,"\t predicted: ", pred_label, " on line ", i)
+            print("line:", test_docs.iloc[i, :])
+            print("\n")
+            wrongTokens.append(test_docs.loc[i, "token"])
+            numWrong += 1
+        i += 1
+    print(wrongTokens)
+    print("total of ", numWrong, " instances incorrectly predicted")
+    return True
 
 train = pd.read_csv("../data/featured_SEM-2012-SharedTask-CD-SCO-training-simple.v2.txt", sep="\t", header = 0)
 dev = pd.read_csv("../data/featured_SEM-2012-SharedTask-CD-SCO-dev-simple.v2.txt", sep="\t", header = 0)
@@ -43,3 +57,5 @@ pickle.dump(clf, open(filename_classifier, 'wb'))
 
 #7. Classifiaction report
 print(classification_report(y_test, y_pred))
+
+error_analysis(dev, y_test, y_pred)
