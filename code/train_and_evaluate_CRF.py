@@ -1,18 +1,9 @@
 import pandas as pd
-import sklearn_crfsuite
-from sklearn.model_selection import train_test_split
 import pycrfsuite
-from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix, classification_report
 import time
-from collections import Counter
 
-
-df = pd.read_csv("../data/featured_SEM-2012-SharedTask-CD-SCO-training-simple.v2.txt", sep="\t", header = 0)
-target = df.target
-X_train = df.drop('target', axis=1)
-
-
-def featurise(sentence_frame, current_idx):
+def featurize(sentence_frame, current_idx):
     current_token = sentence_frame.iloc[current_idx]
     vector = current_token['vector']
     has_negation_affix = current_token['has_negation_affix']
@@ -33,7 +24,7 @@ def featurise(sentence_frame, current_idx):
 
 def featurize_sentence(sentence_frame):
     labels = list(sentence_frame['target'].values)
-    features = [featurise(sentence_frame, i) for i in range(len(sentence_frame))]
+    features = [featurize(sentence_frame, i) for i in range(len(sentence_frame))]
 
     return features, labels
 
@@ -64,34 +55,43 @@ def error_analysis(test_docs, test_labels, pred_labels):
     print("total of ", numWrong, " instances incorrectly predicted")
     return True
 
-train_docs, train_labels = rollup(df)
+def main():
+    trainFile = "SEM-2012-SharedTask-CD-SCO-dev-simple.v2.txt"
+    devFile = "SEM-2012-SharedTask-CD-SCO-dev-simple.v2.txt"
 
-dev = pd.read_csv("../data/featured_SEM-2012-SharedTask-CD-SCO-dev-simple.v2.txt", sep="\t", header = 0)
-test_docs, test_labels = rollup(dev)
+    train = pd.read_csv("../data/featured_" + trainFile, sep="\t", header = 0)
+    dev = pd.read_csv("../data/featured_" + devFile, sep="\t", header=0)
 
-tic = time.perf_counter()
+    train_docs, train_labels = rollup(train)
+    test_docs, test_labels = rollup(dev)
 
-trainer = pycrfsuite.Trainer(verbose=False)
-trainer.set_params({
-    'c1': 1.0,   # coefficient for L1 penalty
-    'c2': 1e-3,  # coefficient for L2 penalty
-})
+    tic = time.perf_counter()
 
-for xseq, yseq in zip(train_docs, train_labels):
-    trainer.append(xseq, yseq)
+    trainer = pycrfsuite.Trainer(verbose=False)
+    trainer.set_params({
+        'c1': 1.0,   # coefficient for L1 penalty
+        'c2': 1e-3,  # coefficient for L2 penalty
+    })
 
-trainer.train('../model/vuelax-bad.crfsuite')
+    for xseq, yseq in zip(train_docs, train_labels):
+        trainer.append(xseq, yseq)
 
-toc = time.perf_counter()
-print(f"Trained in {toc - tic:0.4f} seconds")
-crf_tagger = pycrfsuite.Tagger()
-crf_tagger.open('../model/vuelax-bad.crfsuite')
+    trainer.train('../model/vuelax-bad.crfsuite')
 
-all_true, all_pred = [], []
+    toc = time.perf_counter()
+    print(f"Trained in {toc - tic:0.4f} seconds")
+    crf_tagger = pycrfsuite.Tagger()
+    crf_tagger.open('../model/vuelax-bad.crfsuite')
 
-for i in range(len(test_docs)):
-    all_true.extend(test_labels[i])
-    all_pred.extend(crf_tagger.tag(test_docs[i]))
-print(classification_report(all_true, all_pred))
+    all_true, all_pred = [], []
 
-error_analysis(dev, all_true, all_pred)
+    for i in range(len(test_docs)):
+        all_true.extend(test_labels[i])
+        all_pred.extend(crf_tagger.tag(test_docs[i]))
+    print(classification_report(all_true, all_pred))
+    print(confusion_matrix(all_true, all_pred))
+    error_analysis(dev, all_true, all_pred)
+
+
+if __name__ == '__main__':
+    main()

@@ -1,16 +1,12 @@
 import pandas as pd
 import numpy as np
 import enchant
-
 from nltk import pos_tag
 from nltk.stem import SnowballStemmer
 from nltk.stem.wordnet import WordNetLemmatizer
-
 pd.options.display.width = 0
-
 from gensim.scripts.glove2word2vec import glove2word2vec
 from gensim.models import KeyedVectors
-
 from collections import Counter
 
 
@@ -19,6 +15,7 @@ def stem(dev):
     stemmer = SnowballStemmer('english')
     dev['stem'] = pd.Series()
     dev['stem'] = dev['token'].apply(lambda x: stemmer.stem(x))
+    return dev
 
 
 # lemmatize
@@ -26,6 +23,7 @@ def lemmatize(dev):
     wordnet_lemmatizer = WordNetLemmatizer()
     dev['lemma'] = pd.Series()
     dev['lemma'] = dev['token'].apply(lambda x: wordnet_lemmatizer.lemmatize(x))
+    return dev
 
 
 # cues affix
@@ -51,6 +49,7 @@ def has_negation_affix(dev):
             has_negation_affix_list.append(False)
 
     dev['has_negation_affix'] = has_negation_affix_list
+    return dev
 
 
 # vector representation
@@ -66,7 +65,7 @@ def load_semantic_model(filepath):
     return word_embedding_model
 
 
-def get_vector_representation(dev):
+def get_vector_representation(dev, frequency_threshold, modelword_index, num_features, WORD_EMBEDDING_MODEL):
     tokens = dev["token"]
     list_tokens = list(tokens)
 
@@ -119,43 +118,47 @@ def get_vector_representation(dev):
     return devFeatureVecs
 
 
-def add_vectors(dev):
-    vectors = get_vector_representation(dev)
+def add_vectors(dev, frequency_threshold, modelword_index, num_features, WORD_EMBEDDING_MODEL):
+    vectors = get_vector_representation(dev, frequency_threshold, modelword_index, num_features, WORD_EMBEDDING_MODEL)
     dev["vector"] = pd.Series()
     dev["vector"] = vectors
-
-# load dataset
-path = "../data/preprocessed_SEM-2012-SharedTask-CD-SCO-training-simple.v2.txt"
-dev = pd.read_csv(path, sep="\t")
-
-# pos
-dev_list = dev["token"].tolist()
-pos_tags_dev = pos_tag([i for i in dev_list if i])
-words, tags = zip(*pos_tags_dev)
-pos_list = tags
-dev["pos"] = pos_list
-
-# true/false basic negations
-NegExpList = ['nor', 'neither', 'without', 'nobody', 'none', 'nothing', 'never', 'not', 'no', 'nowhere', 'non']
-dev['in_NegExpList'] = dev['token'].apply(lambda x: x.lower() in NegExpList)
+    return dev
 
 
-# define variables
-model_path = "../model/glove.6B.100d.txt"
-treshold = 5
-WORD_EMBEDDING_MODEL = load_semantic_model(model_path)
-modelword_index = set(WORD_EMBEDDING_MODEL.wv.index2word)
 
-frequency_threshold = 5
-num_features = 100
-nwords = 5
+def get_pos(dev):
+    dev_list = dev["token"].tolist()
+    pos_tags_dev = pos_tag([i for i in dev_list if i])
+    words, tags = zip(*pos_tags_dev)
+    pos_list = tags
+    dev["pos"] = pos_list
+    return dev
 
-# run functions
-stem(dev)
-has_negation_affix(dev)
-add_vectors(dev)
+def get_in_NegExpList(dev):
+    # true/false basic negations
+    NegExpList = ['nor', 'neither', 'without', 'nobody', 'none', 'nothing', 'never', 'not', 'no', 'nowhere', 'non']
+    dev['in_NegExpList'] = dev['token'].apply(lambda x: x.lower() in NegExpList)
+    return dev
 
-# save dataset
-dev.to_csv("../data/featured_SEM-2012-SharedTask-CD-SCO-training-simple.v2.txt", sep="\t",
-           header=['chapter', 'sentence_id', 'token_id', 'token', 'target', "pos", "in_NegExpList", "stem",
-                   "has_negation_affix", "vector"], index=False)
+def main():
+    # load dataset
+    path = "SEM-2012-SharedTask-CD-SCO-dev-simple.v2.txt"
+    dev = pd.read_csv("../data/preprocessed_"+path, sep="\t")
+
+    # run functions
+    dev = get_pos(dev)
+    dev = stem(dev)
+    dev = has_negation_affix(dev)
+    dev = get_in_NegExpList(dev)
+
+    WORD_EMBEDDING_MODEL = load_semantic_model("../model/glove.6B.100d.txt")
+    dev = add_vectors(dev, 5, set(WORD_EMBEDDING_MODEL.wv.index2word), 100, WORD_EMBEDDING_MODEL)
+
+    # save dataset
+    dev.to_csv("../data/featured_"+path, sep="\t",
+               header=['chapter', 'sentence_id', 'token_id', 'token', 'target', "pos", "stem",
+                       "has_negation_affix", "in_NegExpList", "vector"], index=False)
+
+
+if __name__ == '__main__':
+    main()

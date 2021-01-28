@@ -1,45 +1,55 @@
 import pandas as pd
-import nltk
 import string
-
 from nltk.corpus import stopwords
 
-path = "../data/SEM-2012-SharedTask-CD-SCO-training-simple.v2.txt"
-dev = pd.read_csv(path, sep="\t", header=None)
-dev.columns = ['chapter', 'sentence_id', 'token_id', 'token', 'target']
+def lower_tokens(dev):
+    dev.token = dev.token.str.lower()
+    return dev
+def remove_stopwords(dev):
+    stopword_list = stopwords.words("english")
 
-# lower
-dev.token = dev.token.str.lower()
+    possible_negation_cues = ["not", "no", "never", "nor", "than", "nothing", "never", "cannot"]
 
-# remove stopwords
-stopword_list = stopwords.words("english")
+    new_stopword_list = []
 
-possible_negation_cues = ["not", "no", "never", "nor", "than", "nothing", "never", "cannot"]
+    for words in stopword_list:
+        if (words not in possible_negation_cues) & ("n't" not in words):
+            new_stopword_list.append(words)
 
-new_stopword_list = []
+    for words in new_stopword_list:
+        dev.token = dev.token.replace(words, "")
 
-for words in stopword_list:
-    if (words not in possible_negation_cues) & ("n't" not in words):
-        new_stopword_list.append(words)
+    return dev
 
-for words in new_stopword_list:
-    dev.token = dev.token.replace(words, "")
+def remove_numbers(dev):
+    dev.token = dev.token.str.replace("\d+", "")
+    return dev
 
-# remove numbers
-dev.token = dev.token.str.replace("\d+", "")
+def remove_punctuation(dev):
+    punctuations = string.punctuation
 
-# remove punctuation
-punctuations = string.punctuation
+    for punct in punctuations:
+        dev.token = dev.token.replace(punct, "")
+    dev = dev.replace('``', "")
+    dev = dev.replace("''", "")
+    dev = dev.replace("--", "")
+    return dev
 
-for punct in punctuations:
-    dev.token = dev.token.replace(punct, "")
-dev = dev.replace('``', "")
-dev = dev.replace("''", "")
-dev = dev.replace("--", "")
+def main():
+    path = "SEM-2012-SharedTask-CD-SCO-training-simple.v2.txt"
+    dev = pd.read_csv("../data/"+path, sep="\t", header=None)
+    dev.columns = ['chapter', 'sentence_id', 'token_id', 'token', 'target']
 
-# remove empty cell rows
-new_dev = dev[dev.token != ""]
+    dev = lower_tokens(dev)
+    dev = remove_stopwords(dev)
+    dev = remove_numbers(dev)
+    dev = remove_punctuation(dev)
 
-# save preprocessed dataset
-new_dev.to_csv("../data/preprocessed_SEM-2012-SharedTask-CD-SCO-training-simple.v2.txt", sep="\t", header=True,
-               index=False)
+    # remove empty cell rows
+    new_dev = dev[dev.token != ""]
+
+    # save preprocessed dataset
+    new_dev.to_csv("../data/preprocessed_" + path, sep="\t", header=True, index=False)
+
+if __name__ == '__main__':
+    main()
