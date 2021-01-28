@@ -6,8 +6,7 @@ annotations: This folder contains negation cue annotations for 10 articles.
 data: This folder contains the data used for training and testing both systems.
 The glove.6b.100d.txt file in the model folder is not included since it is too large to upload to github. Find and download it here: https://nlp.stanford.edu/projects/glove/
 
-code
-This folder contains the following python scripts:
+code: This folder contains the following python scripts:
 
 preprocess.py: This file preprocesses the corpus
 feature_extraction.py: This file extracts features from the preprocessed data file.
